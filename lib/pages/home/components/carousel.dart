@@ -68,10 +68,13 @@ class Carousel extends StatelessWidget {
 // Big screens
 Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
   return Center(
-    child: ResponsiveWrapper(
-      maxWidth: kDesktopMaxWidth,
-      minWidth: kDesktopMaxWidth,
-      defaultScale: false,
+    child: ResponsiveBreakpoints.builder(
+      breakpoints: [
+        const Breakpoint(start: 0, end: 450, name: MOBILE),
+        const Breakpoint(start: 451, end: 800, name: TABLET),
+        const Breakpoint(start: 801, end: 1920, name: DESKTOP),
+        const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
+      ],
       child: Row(
         children: [
           Expanded(
@@ -89,10 +92,13 @@ Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
 // Mid screens
 Widget _buildTablet(BuildContext context, Widget text, Widget image) {
   return Center(
-    child: ResponsiveWrapper(
-      maxWidth: kTabletMaxWidth,
-      minWidth: kTabletMaxWidth,
-      defaultScale: false,
+    child: ResponsiveBreakpoints.builder(
+      breakpoints: [
+        const Breakpoint(start: 0, end: 450, name: MOBILE),
+        const Breakpoint(start: 451, end: 800, name: TABLET),
+        const Breakpoint(start: 801, end: 1920, name: DESKTOP),
+        const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
+      ],
       child: Row(
         children: [
           Expanded(

@@ -69,47 +69,46 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Header(),
-              ),
-              Carousel(),
-              SizedBox(
-                height: 20.0,
-              ),
-              CvSection(),
-              IosAppAd(),
-              SizedBox(
-                height: 70.0,
-              ),
-              WebsiteAd(),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 28.0),
-                child: PortfolioStats(),
-              ),
-              SizedBox(
-                height: 50.0,
-              ),
-              EducationSection(),
-              SizedBox(
-                height: 50.0,
-              ),
-              SkillSection(),
-              SizedBox(
-                height: 50.0,
-              ),
-              Sponsors(),
-              SizedBox(
-                height: 50.0,
-              ),
-              TestimonialWidget(),
-              Footer(),
-            ],
-          ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(32, 0, 32, 32),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              child: Header(),
+            ),
+            Carousel(),
+            SizedBox(
+              height: 20.0,
+            ),
+            CvSection(),
+            IosAppAd(),
+            SizedBox(
+              height: 70.0,
+            ),
+            WebsiteAd(),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 28.0),
+              child: PortfolioStats(),
+            ),
+            SizedBox(
+              height: 50.0,
+            ),
+            EducationSection(),
+            SizedBox(
+              height: 50.0,
+            ),
+            SkillSection(),
+            SizedBox(
+              height: 50.0,
+            ),
+            Sponsors(),
+            SizedBox(
+              height: 50.0,
+            ),
+            TestimonialWidget(),
+            Footer(),
+          ],
         ),
       ),
     );

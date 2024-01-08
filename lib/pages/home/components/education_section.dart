@@ -36,6 +36,7 @@ final List<Education> educationList = [
 class EducationSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    ResponsiveBreakpoints.of(context);
     return Container(
       child: ScreenHelper(
         desktop: _buildUi(kDesktopMaxWidth),
@@ -48,10 +49,13 @@ class EducationSection extends StatelessWidget {
   Widget _buildUi(double width) {
     return Container(
       alignment: Alignment.center,
-      child: ResponsiveWrapper(
-        maxWidth: width,
-        minWidth: width,
-        defaultScale: false,
+      child: ResponsiveBreakpoints.builder(
+        breakpoints: [
+          const Breakpoint(start: 0, end: 450, name: MOBILE),
+          const Breakpoint(start: 451, end: 800, name: TABLET),
+          const Breakpoint(start: 801, end: 1920, name: DESKTOP),
+          const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
+        ],
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
